@@ -74,7 +74,7 @@ main{
   justify-content: center;
 }
 .main{
-  background-color: rgb(243, 243, 243);
+  background-color: #ffffff;
   width: 100%;
   height: 500px;
   display: flex;
@@ -85,11 +85,11 @@ main{
 .form-target{
   width: 450px;
   max-height: 450px;
-  background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid rgb(226, 226, 226);
-  box-shadow: 0 0 20px rgb(224, 224, 224);
   padding: 40px;
+  border-radius: 39px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  5px 5px 10px #ababab,
+             -5px -5px 10px #ffffff;
 }
 .topic{
   display: flex;
@@ -178,12 +178,13 @@ main{
 .sucses-form{
   width: 450px;
   max-height: 400px;
-  background-color: #fff;
-  border-radius: 10px;
   border: 1px solid rgb(226, 226, 226);
-  box-shadow: 0 0 20px rgb(224, 224, 224);
   padding: 40px;
   text-align: center;
+  border-radius: 54px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  5px 5px 17px #c2c2c2,
+             -5px -5px 17px #ffffff;
 }
 .sucses-form h4{
   font-size: 15px;
@@ -223,11 +224,12 @@ main{
 .login{
   width: 450px;
   max-height: 450px;
-  background-color: #fff;
   border-radius: 10px;
-  border: 1px solid rgb(226, 226, 226);
   box-shadow: 0 0 20px rgb(224, 224, 224);
-  padding: 40px;
+  padding: 40px;border-radius: 54px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  5px 5px 17px #c2c2c2,
+               -5px -5px 17px #ffffff;
 }
 .login h4{
   font-size: 15px;
