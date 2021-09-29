@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Login-1</title>
+  </head>
+  <body dir="rtl">
+    <main class="">
+      <div class="main">
+        <form id="basic-form" action="login-2.html" method="GET" class="form-target">
+          <div class="topic">
+            <h4>تایید شماره تلفن همراه</h4>
+            <a href="">بازگشت<i class="fas fa-chevron-left"></i></a>
+          </div>
+          <p>فعال شدن گزینه ارسال مجدد <span>129</span> ثانیه</p>
+          <input id="age" name="age" type="text" onkeypress="return onlyNumberKey(event)" maxlength="4" autocomplete="off"/>
+          <div>
+            <p>کد تایید ارسال شده به شماره 09906468387 را وارد کنید</p>
+            <a href="">ورود بارمز عبور<i class="fas fa-chevron-left"></i></a>
+          </div>
+          <input
+            class="submit btn-submit"
+            type="submit"
+            value="ادامه"
+            required
+          />
+        </form>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#basic-form").validate({
+          rules: {
+            age: {
+              required: true,
+              number: true,
+              min: 1000,
+            },
+          },
+          messages: {
+            age: {
+              required: "لطفا کد ارسال شده را وارد کنید !",
+              number: "لطقا مقدار عددی وارد کنید !",
+              min: "تعداد ارقام باید 4 باشد !",
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      function onlyNumberKey(evt) {
+          var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+          if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)){
+            alert("حروف فارسی نمیتوانید وارد کنید !");
+            return false;
+          } 
+          else{
+            return true;
+          }
+      }
+    </script>
+  </body>
+</html>

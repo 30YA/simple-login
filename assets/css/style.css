@@ -1,0 +1,318 @@
+/* @import url("cssreset.css"); */
+@font-face {
+  font-family: sahel;
+  src: url("../fonts/Sahel.eot") format("eot"),
+    url("../fonts/Sahel.woff") format("woff"),
+    url("../fonts/Sahel.woff2") format("woff2");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: vazir;
+  src: url("../fonts/Vazir-Medium.eot") format("eot"),
+    url("../fonts/Vazir-Medium.woff") format("woff"),
+    url("../fonts/Vazir-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --main-bg5-color: #eae2b7;
+  --main-bg4-color: #fcbf49;
+  --main-bg3-color: #f77f00;
+  --main-bg2-color: #d62828;
+  --main-bg1-color: rgb(41, 41, 41);
+}
+/**{
+    background-color: var(--p-color);
+} */
+.yellow {
+  background-color: yellow;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+body,html{
+  height: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,body{
+  font-family: vazir;
+}
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+/*------------------------------------------------------*/
+/*--------------- login-1 -------------------*/
+main{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main{
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.form-target{
+  width: 450px;
+  max-height: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgb(226, 226, 226);
+  box-shadow: 0 0 20px rgb(224, 224, 224);
+  padding: 40px;
+}
+.topic{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.topic h4{
+  color: rgb(77, 77, 77);
+  font-size: 15px;
+}
+.topic a{
+  font-size: 12px;
+  color: rgb(150, 150, 150);
+  transition: color 300ms;
+}
+.topic a i{
+  margin-right: 10px;
+  font-size: 10px;
+}
+.topic a:hover{
+  margin-right: 15px;
+  color: #d62828;
+}
+.form-target p:nth-child(2){
+  color: rgb(150, 150, 150);
+  font-size: 12px;
+}
+.gray-txt p:nth-child(2){
+  color: #d62828;
+  font-size: 12px;
+}
+.form-target p:nth-child(2) span{
+  color: rgb(17, 206, 206);
+}
+.form-target input{
+  width: 100%;
+  height: 43px;
+  margin: 23px 0 10px 0;
+  padding: 0 5px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+.form-target input:focus{
+  box-shadow: 0 0 0 3px rgba(17, 206, 206, .3);
+}
+.form-target div p:nth-child(1){
+  font-size: 10px;
+  color: rgb(150, 150, 150);
+  margin-top: 10px;
+}
+.form-target div a:nth-child(2){
+  color: rgb(17, 206, 206);
+  font-size: 12px;
+  display: block;
+  margin: 17px 0;
+  transition: color 300ms;
+}
+.form-target a:nth-child(5):hover{
+  color: #d62828;
+}
+.form-target a:nth-child(5) i{
+  vertical-align: -2px;
+  margin-right: 10px;
+}
+.form-target .btn-submit{
+  outline: none;
+  width: 100%;
+  height: 42px;
+  background-color: #d62828;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  transition: 200ms;
+  border: 2px solid #d62828;
+}
+.form-target .btn-submit:hover{
+  cursor: pointer;
+  background-color: transparent;
+  color: #d62828;
+}
+/*--------------- login-1 end -------------------*/
+/*--------------- login-3 -------------------*/
+.sucses-form{
+  width: 450px;
+  max-height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgb(226, 226, 226);
+  box-shadow: 0 0 20px rgb(224, 224, 224);
+  padding: 40px;
+  text-align: center;
+}
+.sucses-form h4{
+  font-size: 15px;
+  margin: 0 8px 12px 8px;
+  color: rgb(77, 77, 77);
+}
+.sucses-form p{
+  color: rgb(150, 150, 150);
+  font-size: 12px;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons .btn-submit{
+  margin: 40px 10px 10px 10px;
+  width: 150px;
+  height: 42px;
+  border: 2px solid #d62828;
+  background-color: transparent;
+  color: #d62828;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.buttons .btn-submit2{
+  background-color: #d62828;
+  color: #fff;
+  transition: 300ms;
+}
+.buttons .btn-submit2:hover{
+  background-color: transparent;
+  color: #d62828;
+}
+/*--------------- login-3 -------------------*/
+/*--------------- login -------------------*/
+.login{
+  width: 450px;
+  max-height: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgb(226, 226, 226);
+  box-shadow: 0 0 20px rgb(224, 224, 224);
+  padding: 40px;
+}
+.login h4{
+  font-size: 15px;
+  margin: 0 0 10px 8px;
+  color: rgb(77, 77, 77);
+}
+.login p{
+  color: rgb(150, 150, 150);
+  font-size: 12px;
+  margin: 5px 0 10px 0;
+}
+input, textarea{
+  width: 100%;
+  height: 43px;
+  margin: 10px 0 8px 0;
+  padding: 0 5px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+input:focus{
+  box-shadow: 0 0 0 3px rgba(17, 206, 206, .3);
+}
+.login .btn-submit{
+  outline: none;
+  width: 100%;
+  height: 42px;
+  margin-top: 10px;
+  background-color: #d62828;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  transition: 200ms;
+  border: 2px solid #d62828;
+}
+.login .btn-submit:hover{
+  cursor: pointer;
+  background-color: transparent;
+  color: #d62828;
+}
+.login div:nth-child(7) p{
+  border-top: 1px solid rgb(196, 196, 196);
+  margin: 25px 0;
+  padding: 15px 0;
+  text-align: center;
+}
+.login div:nth-child(7) p a{
+  color: rgb(17, 206, 206);
+}
+/*--------------- login end -------------------*/
+/*--------------- profile -------------------*/
+.profile-target{
+  display: flex;
+}
+.profile-target .tabs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-target .tabs input, textarea{
+  width: 93%;
+  height: 43px;
+  margin: 0 0 10px 0;
+}
+/*--------------- profile end -------------------*/
+/*--------------- Validation -------------------*/
+label {
+  font-weight: bold;
+  display: inline-block;
+  transition: all 100ms;
+}
+label span {
+  font-size: 13px;
+}
+label.error {
+    color: red;
+    font-size: 13px;
+    display: block;
+    margin: 5px 2px;
+}
+input.error, textarea.error {
+    border: 1px dashed red;
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3);
+    font-weight: 300;
+    color: red;
+}
+/*--------------- Validation end -------------------*/

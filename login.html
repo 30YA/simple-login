@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Login</title>
+  </head>
+  <body dir="rtl">
+    <main class="">
+      <div class="main">
+        <form method="GET" action="login-1.html" class="login" id="basic-form">
+          <h4>ورود / ثبت نام</h4>
+          <p>شماره موبایل  خود را وارد کنید</p>
+          <input id="age" type="text" name="age" maxlength="11" autocomplete="off" onkeypress="return onlyNumberKey(event)" />
+          <input
+            class="btn-submit submit"
+            type="submit"
+            value="ورود به مارکت"
+          />
+          <div>
+            <p>
+              با ورود و یا ثبت نام در فروشگاه شما <a>شرایط و قوانین </a>استفاده
+              از سرویس های سایت فروشگاه و <a>قوانین حریم خصوصی</a> آن را
+              میپذیرید
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#basic-form").validate({
+          rules: {
+            age: {
+              required: true,
+              number: true,
+              min: 011111111111,
+            },
+          },
+          messages: {
+            age: {
+              required: "لطفا شماره همراه خود را وارد کنید !",
+              number: "لطفا مقدار عددی وارد کنید",
+              min: "شماره همراه شما باید 11 رقم باشد !",
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      function onlyNumberKey(evt) {
+          var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+          if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)){
+            alert("حروف فارسی نمیتوانید وارد کنید !");
+            return false;
+          } 
+          else{
+            return true;
+          }
+      }
+    </script>
+  </body>
+</html>

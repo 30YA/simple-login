@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Profile</title>
+  </head>
+  <body dir="rtl">
+    <main class="">
+      <div class="main">
+        <form method="GET" action="login-3.html" class="login" id="basic-form">
+          <h4 style="margin-bottom: 20px">تکمیل پروفایل :</h4>
+          <div class="profile-target">
+            <div class="tabs">
+              <p>نام و نام خانوادگی :</p>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                maxlength="30"
+                autocomplete="off"
+                onkeypress="return onlyNumberKey2(event)"
+              />
+            </div>
+            <div class="tabs">
+              <p>کد ملی :</p>
+              <input
+                id="age1"
+                type="text"
+                name="age1"
+                maxlength="10"
+                autocomplete="off"
+                onkeypress="return onlyNumberKey(event)"
+              />
+            </div>
+          </div>
+          <div class="profile-target">
+            <div class="tabs">
+              <p>آدرس :</p>
+              <input
+                id="name2"
+                type="text"
+                name="name2"
+                maxlength="11"
+                autocomplete="off"
+                onkeypress="return onlyNumberKey2(event)"
+              />
+            </div>
+            <div class="tabs">
+              <p>سال تولد :</p>
+              <input
+                id="age"
+                type="text"
+                name="age"
+                maxlength="4"
+                autocomplete="off"
+                onkeypress="return onlyNumberKey(event)"
+              />
+            </div>
+          </div>
+
+          <input
+            class="btn-submit submit"
+            type="submit"
+            value="تکمیل پروفایل"
+          />
+          <div>
+            <p>
+              با ورود و یا ثبت نام در فروشگاه شما <a>شرایط و قوانین </a>استفاده
+              از سرویس های سایت فروشگاه و <a>قوانین حریم خصوصی</a> آن را
+              میپذیرید
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#basic-form").validate({
+          rules: {
+            age1: {
+              required: true,
+              min: 1000000000,
+            },
+            age: {
+              required: true,
+              min: 1000,
+            },
+            name: {
+              required: true,
+            },
+            name2: {
+              required: true,
+            },
+          },
+          messages: {
+            age1: {
+              required: "کد ملی خود را وارد کنید !",
+              min: "کد ملی شما باید10 رقم باشد",
+            },
+            age: {
+              required: "سال تولد خود را وارد کنید",
+              min: "سال تولد باید 4 رقم باشد",
+            },
+            name: {
+              required: "نام خود را وارد کنید !",
+            },
+            name2: {
+              required: "آدرس خود را وارد کنید !",
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      function onlyNumberKey(evt) {
+        var ASCIICode = evt.which ? evt.which : evt.keyCode;
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+          alert("حروف فارسی نمیتوانید وارد کنید !");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+    <script>
+      function onlyNumberKey2(evt) {
+        var ASCIICode = evt.which ? evt.which : evt.keyCode;
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+          return true;
+        } else {
+          alert("از اعداد نمیتوانید استفاده کنید !");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
